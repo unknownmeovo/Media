@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Sign Up</title>
+  <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js"></script>
+  <script src="firebase.js" defer></script>
+</head>
+<body>
+  <div id="auth-container">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+      <input type="email" id="signup-email" placeholder="Email" required>
+      <input type="password" id="signup-password" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="Email" required>
+      <input type="password" id="login-password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <script>
+    // Redirect to profile page on successful login/signup
+    window.addEventListener('DOMContentLoaded', () => {
+      if (firebase.auth().currentUser) {
+        window.location.replace('profile.html');
+      }
+    });
+  </script>
+</body>
+</html>

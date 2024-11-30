@@ -1,0 +1,9 @@
+App Structure:
+index.html – Home page (Login and Sign Up)
+profile.html – User profile (view/edit profile)
+posts.html – View posts and reels
+messages.html – Messaging feature
+auth.js – Common authentication code
+firebase.js – Firebase initialization and Firestore functions
+styles.css – Common styles for all pages
+localstorage.js – Handle user preferences in local storage
